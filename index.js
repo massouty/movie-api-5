@@ -158,7 +158,7 @@ app.get('/movies/:Title',(req,res)=> {
 });
 
 //get movies/director/:directorName
-pp.get('/movies/director/:directorName',(req,res)=> {
+app.get('/movies/director/:directorName',(req,res)=> {
   movies.findOne({"Director.Name": req.params.name})
     .then((movie) => {
       res.json(movie.Director);
