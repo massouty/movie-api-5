@@ -1,21 +1,21 @@
 const mongoose = require ("mongoose");
-let movieSchema = mongoose.Schema({Title:{type:string , required:true},
-Description:{type:string , required:true},
+let movieSchema = mongoose.Schema({Title:{type:String , required:true},
+Description:{type:String , required:true},
 Genre:{
-    Name:string,
-    Description:string
+    Name:String,
+    Description:String
 },
 Director:{
-    Name:string,
-    Bio:string
+    Name:String,
+    Bio:String
 },
-ImagePath:string,
-Featured:boolean
+ImagePath:String,
+Featured:Boolean
 });
 
-let userSchema = mongoose.Schema({userName:{type:string , required:true},
-password:{type:string , required:true},
-email:{type:string,required:true},
+let userSchema = mongoose.Schema({userName:{type:String, required:true},
+password:{type:String , required:true},
+email:{type:String,required:true},
 Birthday: Date,
   FavoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
 });
